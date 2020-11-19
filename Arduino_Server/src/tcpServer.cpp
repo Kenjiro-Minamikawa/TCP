@@ -48,4 +48,17 @@ namespace ARRC{
         rdata = msg.toFloat();
         return rdata;
     }
+
+    bool TCP::clientFind(){
+        client = server->available();
+        return client;
+    }
+
+    bool TCP::connected(){
+        return client.connected();
+    }
+
+    bool TCP::available(){
+        return client.available();
+    }
 }
